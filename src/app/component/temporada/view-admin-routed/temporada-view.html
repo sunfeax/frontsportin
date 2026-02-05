@@ -66,13 +66,9 @@
             <div class="row g-1">
               <div class="col-5 text-muted small text-uppercase">Club</div>
               <div class="col-7 fw-semibold small">
-                @if (oTemporada()?.club) {
-                  <a [routerLink]="['/club', '/view', oTemporada()?.club?.id]">
-                    {{ oTemporada()?.club?.nombre }} ({{ oTemporada()?.club?.id }})
-                  </a>
-                } @else {
-                  Sin club
-                }
+                <a [routerLink]="['/club', 'view', oTemporada()?.club?.id]">
+                  {{ oTemporada()?.club?.nombre }} ({{ oTemporada()?.club?.id }})
+                </a>
               </div>
             </div>
           </div>
